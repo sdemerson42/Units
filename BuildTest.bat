@@ -14,6 +14,6 @@ echo "Pushing..."
 cd..
 cd..
 git add *
-git commit -m "Automated commit to be pushed to remote repo."
+git commit -m %1
 git push
 cmd /k
