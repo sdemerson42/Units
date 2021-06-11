@@ -8,6 +8,7 @@ cd\repo\\units\units\debug
 vstest.console.exe /Tests:TestMethod1,TestMethod2,TestMethod3,TestMethod4 ..\..\unittest\debug\UnitTest.dll
 if %ERRORLEVEL% EQU 0 goto PUSH
 cmd /k
+exit
 
 :PUSH
 echo "Pushing..."

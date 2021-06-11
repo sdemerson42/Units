@@ -35,7 +35,7 @@ namespace UnitTest
 		{
 			Person testPerson{ "Harold" };
 			auto result = testPerson.sum(0);
-			Assert::AreEqual(result, 3);
+			Assert::AreEqual(result, 0);
 		}
 	};
 }
