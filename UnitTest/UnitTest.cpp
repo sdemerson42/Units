@@ -23,5 +23,12 @@ namespace UnitTest
 			auto result = testPerson.sum(7);
 			Assert::AreEqual(result, 28);
 		}
+
+		TEST_METHOD(TestMethod3)
+		{
+			Person testPerson{ "Harold" };
+			auto result = testPerson.sum(10);
+			Assert::AreEqual(result, 55);
+		}
 	};
 }

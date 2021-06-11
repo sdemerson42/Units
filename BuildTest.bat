@@ -5,7 +5,15 @@ msbuild
 cd\repo\units\unittest
 msbuild
 cd\repo\\units\units\debug
-vstest.console.exe /Tests:TestMethod1,TestMethod2 ..\..\unittest\debug\UnitTest.dll
-echo %ERRORLEVEL%
+vstest.console.exe /Tests:TestMethod1,TestMethod2,TestMethod3 ..\..\unittest\debug\UnitTest.dll
+if %ERRORLEVEL% EQU 0 goto PUSH
 cmd /k
 
+:PUSH
+echo "Pushing..."
+cd..
+cd..
+git add *
+git commit -m "Automated commit to be pushed to remote repo."
+git push
+cmd /k
